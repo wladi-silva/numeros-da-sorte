@@ -4,4 +4,4 @@ Usei uma simples interface grafica.
 
 # Como usar:
 
-Rode a roleta clicando no botão, você ganhara se os três simbolos forem iguais.
+Aperte o botão e números da sorte serão lançados para você.
