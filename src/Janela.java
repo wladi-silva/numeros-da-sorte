@@ -1,5 +1,7 @@
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 import javax.swing.JButton;
@@ -67,23 +69,20 @@ public class Janela implements ActionListener {
     public void actionPerformed(ActionEvent e) {
        
         aleatorio = new Random();
-        int numeros[] = new int[5];
+        List<Integer> numeros = new ArrayList<Integer>();
 
-        for (int i = 0; i < numeros.length; i++) {
-            
-            numeros[i] = aleatorio.nextInt(100);
-            while (numeros[i] == 0) {
-                numeros[i] = aleatorio.nextInt(100);    
-            }
+        numeros.add(aleatorio.nextInt(100));
+        numeros.add(aleatorio.nextInt(100));
+        numeros.add(aleatorio.nextInt(100));
+        numeros.add(aleatorio.nextInt(100));
+        numeros.add(aleatorio.nextInt(100));
 
-        }
-               
-        labelDigito1.setText(Integer.toString(numeros[0]));
-        labelDigito2.setText(Integer.toString(numeros[1]));
-        labelDigito3.setText(Integer.toString(numeros[2]));
-        labelDigito4.setText(Integer.toString(numeros[3]));
-        labelDigito5.setText(Integer.toString(numeros[4]));
-
-
+        labelDigito1.setText(Integer.toString(numeros.get(0))); 
+        labelDigito2.setText(Integer.toString(numeros.get(1)));
+        labelDigito3.setText(Integer.toString(numeros.get(2)));
+        labelDigito4.setText(Integer.toString(numeros.get(3)));
+        labelDigito5.setText(Integer.toString(numeros.get(4)));
+        
     }
+
 }
